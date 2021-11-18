@@ -29,9 +29,9 @@ requirements:
     - python
     - pip
     - setuptools
-    - pybind11 >=2.5,<2.6
+    - pybind11 >=2.8,<2.9
     # pin exactly because that's what the upstream submodule does too
-    - tomlplusplus ==2.4.0
+    - tomlplusplus ==2.5.0
   run:
     - python
 
