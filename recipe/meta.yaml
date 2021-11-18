@@ -1,4 +1,4 @@
-{% set version = "1.0.6" %}
+{% set version = "1.0.7" %}
 
 package:
   name: pytomlpp
@@ -8,7 +8,7 @@ source:
   # github tarball does not contain submodules, cf. dear-github/dear-github#214
   # in this case, we don't mind, because tomlplusplus is packaged separately...
   - url: https://github.com/bobfang1992/pytomlpp/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 629d580e39476da329993dc9e26dbd7752eb8a882da848a44b6e4ae6d6c5996b
+    sha256: 81241d74ca08df1da5786d6ea2c448cf33d394a5d180c0175bd8f8c3adf20b90
     patches:
       - patches/0001-redirect-tomlplusplus-include-to-global-library-path.patch
   # ... however, we do include the toml-test submodule; keep in sync with
@@ -29,9 +29,9 @@ requirements:
     - python
     - pip
     - setuptools
-    - pybind11 >=2.5,<2.6
+    - pybind11 >=2.8,<2.9
     # pin exactly because that's what the upstream submodule does too
-    - tomlplusplus ==2.4.0
+    - tomlplusplus ==2.5.0
   run:
     - python
 
