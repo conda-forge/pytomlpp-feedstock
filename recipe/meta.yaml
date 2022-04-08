@@ -11,6 +11,8 @@ source:
     sha256: 1693ce5da425a51810288389596b1c35634c732ca159fd855d5938f53db5c2ce
     patches:
       - patches/0001-redirect-tomlplusplus-include-to-global-library-path.patch
+      - patches/0002-unpin-pybind11-for-pypy.patch
+      - patches/0003-fix-wrong-kwarg-that-fails-on-pytest-7.patch
   # ... however, we do include the toml-test submodule; keep in sync with
   # https://github.com/bobfang1992/pytomlpp/tree/master/tests/<commit>
   - git_url: https://github.com/BurntSushi/toml-test

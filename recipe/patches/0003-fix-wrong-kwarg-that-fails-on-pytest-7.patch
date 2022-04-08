@@ -1,0 +1,25 @@
+From 3df52aee8ead1bd8c01bd45e379e14d3ad5968d6 Mon Sep 17 00:00:00 2001
+From: "H. Vetinari" <h.vetinari@gmx.com>
+Date: Fri, 8 Apr 2022 11:07:51 +1100
+Subject: [PATCH 3/3] fix wrong kwarg that fails on pytest 7
+
+---
+ tests/python-tests/test_api.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/tests/python-tests/test_api.py b/tests/python-tests/test_api.py
+index c2eadaf..addbf4a 100644
+--- a/tests/python-tests/test_api.py
++++ b/tests/python-tests/test_api.py
+@@ -30,7 +30,7 @@ _marks = {
+     for s in TOML_0_4_SPECIFIC
+ }
+ _valid_marks = {
+-    s: (pytest.mark.skip(reson="Skipping for these tests for now"))
++    s: (pytest.mark.skip(reason="Skipping for these tests for now"))
+     for s in TOML_TESTS_SKIP
+ }
+ valid_toml_files = [
+-- 
+2.35.1.windows.2
+
