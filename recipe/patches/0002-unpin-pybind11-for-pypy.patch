@@ -1,14 +1,14 @@
-From 5eea1d8c25a9036591ca2d95b27730a2dd05bee4 Mon Sep 17 00:00:00 2001
+From 366a8f01e679e2d84015f8eaeef47147a1a7faa2 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Fri, 19 Nov 2021 00:57:57 +1100
-Subject: [PATCH 2/3] unpin pybind11 for pypy
+Subject: [PATCH 2/2] unpin pybind11 for pypy
 
 ---
  setup.cfg | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/setup.cfg b/setup.cfg
-index 1ddefbe..75ca017 100644
+index 58a3d22..3de72a8 100644
 --- a/setup.cfg
 +++ b/setup.cfg
 @@ -26,8 +26,7 @@ classifiers =
