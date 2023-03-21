@@ -1,4 +1,4 @@
-From a4483d0ec91250432de47696e5f835d0fd563e6e Mon Sep 17 00:00:00 2001
+From 2385dbae3f5f20c167129cbd836e6d5f9fc21783 Mon Sep 17 00:00:00 2001
 From: "H. Vetinari" <h.vetinari@gmx.com>
 Date: Thu, 12 Aug 2021 19:39:51 +0200
 Subject: [PATCH 1/2] redirect tomlplusplus-include to global library path
@@ -8,18 +8,18 @@ Subject: [PATCH 1/2] redirect tomlplusplus-include to global library path
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/include/pytomlpp/pytomlpp.hpp b/include/pytomlpp/pytomlpp.hpp
-index b8c6eed..a907ccc 100644
+index b5020f5..194a3b2 100644
 --- a/include/pytomlpp/pytomlpp.hpp
 +++ b/include/pytomlpp/pytomlpp.hpp
-@@ -28,7 +28,7 @@
+@@ -32,7 +32,7 @@
  #endif
- #include <pybind11/pybind11.h>
- #include <sstream>
+ #include "compilers.hpp"
+ PYTOMLPP_PUSH_OPTIMIZATIONS;
 -#include <tomlplusplus/include/toml++/toml.h>
 +#include <toml++/toml.h>
+ PYTOMLPP_POP_OPTIMIZATIONS;
  
  // namespace and type forward declarations
- namespace py = pybind11;
 -- 
-2.35.1.windows.2
+2.38.1.windows.1
 
