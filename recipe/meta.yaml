@@ -1,4 +1,4 @@
-{% set version = "1.0.11" %}
+{% set version = "1.0.13" %}
 
 package:
   name: pytomlpp
@@ -8,7 +8,7 @@ source:
   # github tarball does not contain submodules, cf. dear-github/dear-github#214
   # in this case, we don't mind, because tomlplusplus is packaged separately...
   - url: https://github.com/bobfang1992/pytomlpp/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 8198126d23485ffa2dac516aa027d019a0df0df89bbdb9958b254832af11a4c2
+    sha256: 785fe23907ec9c8c3f172603ed9c68480f4da9a0eb3c9ed63f45e66303a2dba4
     patches:
       - patches/0001-redirect-tomlplusplus-include-to-global-library-path.patch
       - patches/0002-unpin-pybind11-for-pypy.patch
@@ -19,7 +19,7 @@ source:
     folder: tests/toml-test
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<37]
 
