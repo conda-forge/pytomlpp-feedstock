@@ -19,7 +19,7 @@ source:
     folder: tests/toml-test
 
 build:
-  number: 2
+  number: 3
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<37]
 
