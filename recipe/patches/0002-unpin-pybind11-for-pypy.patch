@@ -1,26 +1,26 @@
-From d5ad763ee9b29e9293f9e5e21c8583180e33f384 Mon Sep 17 00:00:00 2001
-From: "H. Vetinari" <h.vetinari@gmx.com>
-Date: Fri, 19 Nov 2021 00:57:57 +1100
-Subject: [PATCH 2/2] unpin pybind11 for pypy
+From 650bf56fa1748b1a1a442aa322027547c2b7186c Mon Sep 17 00:00:00 2001
+From: Bob Fang <dorafmon@gmail.com>
+Date: Sat, 29 Nov 2025 16:48:24 -0500
+Subject: [PATCH] unpin pybind11 for pypy
 
 ---
  setup.cfg | 3 +--
  1 file changed, 1 insertion(+), 2 deletions(-)
 
 diff --git a/setup.cfg b/setup.cfg
-index 8f448a1..2474ca4 100644
+index cb1e4ba..375ed1d 100644
 --- a/setup.cfg
 +++ b/setup.cfg
-@@ -27,8 +27,7 @@ classifiers =
+@@ -29,8 +29,7 @@ classifiers =
  keywords = toml, parser, serilization, deserialization, serdes
  
  [options]
 -setup_requires =
--    pybind11~=2.8
+-    pybind11~=2.10
 +setup_requires = pybind11
  zip_safe = false
  packages = find:
  package_dir = =src
 -- 
-2.38.1.windows.1
+2.50.1 (Apple Git-155)
 
